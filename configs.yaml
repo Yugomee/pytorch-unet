@@ -1,0 +1,19 @@
+train:
+  data_dir: /data/Cityscapes
+  batch_size: 4
+  image_size: [512, 256]
+  learning_rate: 0.001
+  num_classes: 4
+  epochs: 10
+  log_interval : 10
+  save_interval : 10 
+  checkpoint_path: '/home/jeehyun/study/pytorch-unet/checkpoints/'
+
+test:
+  model_path: '/home/jeehyun/study/pytorch-unet/checkpoints/unet_epoch_10.pth'
+  num_classes : 4
+  data_dir: /data/Cityscapes
+  image_size: [512, 256]
+  batch_size: 4
+  threshold: 0.5
+  save_path: '/home/jeehyun/study/pytorch-unet/results/'
